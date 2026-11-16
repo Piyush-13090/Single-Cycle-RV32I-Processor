@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+__pycache__/
+*.pyc
+
+# simulator binaries and large / temporary outputs (re-created by scripts/run_all.sh)
+sim/*.vvp
+sim/tb_*.vcd
+sim/stall_*
+sim/mutant_*/
+
+# large synthesis intermediates (re-created by scripts/synth.sh)
+synth/program.hex
+synth/reports/fpga_top_ecp5.json
+synth/reports/yosys_*.log
+
+# Office lock files
+~$*
+.~lock.*

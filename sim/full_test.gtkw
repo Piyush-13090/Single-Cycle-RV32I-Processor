@@ -1,0 +1,59 @@
+[*] GTKWave save file for the Single-Cycle RV32I CPU
+[*] Usage (from the project folder):  gtkwave sim/full_test.gtkw
+[dumpfile] "sim/cpu_full_test.vcd"
+[timestart] 0
+[size] 1600 900
+[pos] -1 -1
+*-14.000000 15000 -1
+[treeopen] tb_rv32i_cpu.
+[treeopen] tb_rv32i_cpu.dut.
+[sst_width] 260
+[signals_width] 220
+@28
+tb_rv32i_cpu.clk
+tb_rv32i_cpu.rst
+tb_rv32i_cpu.en
+@200
+-FETCH
+@22
+tb_rv32i_cpu.dut.pc_cur[31:0]
+tb_rv32i_cpu.dut.instr[31:0]
+@200
+-CONTROL
+@28
+tb_rv32i_cpu.dut.reg_write
+tb_rv32i_cpu.dut.alu_src
+tb_rv32i_cpu.dut.mem_read
+tb_rv32i_cpu.dut.mem_write
+tb_rv32i_cpu.dut.mem_to_reg
+tb_rv32i_cpu.dut.branch
+tb_rv32i_cpu.dut.illegal
+@22
+tb_rv32i_cpu.dut.alu_op[1:0]
+tb_rv32i_cpu.dut.alu_ctrl[3:0]
+tb_rv32i_cpu.dut.imm_sel[1:0]
+@200
+-DATAPATH
+@24
+tb_rv32i_cpu.dut.rs1_data[31:0]
+tb_rv32i_cpu.dut.rs2_data[31:0]
+tb_rv32i_cpu.dut.imm[31:0]
+tb_rv32i_cpu.dut.alu_b[31:0]
+tb_rv32i_cpu.dut.alu_result[31:0]
+@28
+tb_rv32i_cpu.dut.zero
+tb_rv32i_cpu.dut.pc_src
+@24
+tb_rv32i_cpu.dut.mem_rdata[31:0]
+tb_rv32i_cpu.dut.wb_data[31:0]
+@22
+tb_rv32i_cpu.dut.pc_next[31:0]
+@200
+-REGISTERS
+@24
+tb_rv32i_cpu.dut.u_rf.regs[10][31:0]
+tb_rv32i_cpu.dut.u_rf.regs[11][31:0]
+tb_rv32i_cpu.dut.u_rf.regs[12][31:0]
+tb_rv32i_cpu.dut.u_rf.regs[13][31:0]
+[pattern_trace] 1
+[pattern_trace] 0
