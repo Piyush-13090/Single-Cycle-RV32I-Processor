@@ -1,0 +1,19 @@
+; listing of programs/fibonacci.s
+; ADDR  MACHINE   SOURCE
+0000  08000413  addi s0, x0, 128        # s0 = base address 0x80
+0004  00000293  addi t0, x0, 0          # F(i)
+0008  00100313  addi t1, x0, 1          # F(i+1)
+000c  01400393  addi t2, x0, 20         # count
+0010  00000493  addi s1, x0, 0          # i
+0014  00542023  loop:   sw   t0, 0(s0)          # mem[base + 4i] = F(i)
+0018  00628e33  add  t3, t0, t1         # t3 = F(i) + F(i+1)
+001c  00030293  addi t0, t1, 0          # F(i)   <- F(i+1)
+0020  000e0313  addi t1, t3, 0          # F(i+1) <- t3
+0024  00440413  addi s0, s0, 4
+0028  00148493  addi s1, s1, 1
+002c  fe7494e3  bne  s1, t2, loop
+0030  ffc42503  lw   a0, -4(s0)         # a0 = last value stored = F(19)
+0034  00000063  halt
+
+; labels
+;   loop         = 0x0014

@@ -1,0 +1,20 @@
+{
+  "instructions_executed": 34,
+  "cycles_single_cycle": 34,
+  "mix": {
+    "addi": 19,
+    "beq": 8,
+    "bne": 7
+  },
+  "branches": {
+    "beq": [
+      5,
+      3
+    ],
+    "bne": [
+      5,
+      2
+    ]
+  },
+  "static_instructions": 25
+}

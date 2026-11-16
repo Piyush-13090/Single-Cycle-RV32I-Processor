@@ -1,0 +1,4 @@
+ERROR: rtl/instr_mem.v:30: $readmemh: Unable to open program.hex for reading.
+VCD info: dumpfile sim/tb_alu.vcd opened for output.
+tb_alu: PASS (5010 tests)
+tb/tb_alu.v:68: $finish called at 5010000 (1ps)

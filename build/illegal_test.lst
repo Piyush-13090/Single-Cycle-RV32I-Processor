@@ -1,0 +1,23 @@
+; listing of programs/illegal_test.s
+; ADDR  MACHINE   SOURCE
+0000  00900093  addi x1, x0, 9          # x1 = 9
+0004  00400113  addi x2, x0, 4          # x2 = 4
+0008  03300193  addi x3, x0, 0x33       # markers: these must NOT change
+000c  04400213  addi x4, x0, 0x44
+0010  05500293  addi x5, x0, 0x55
+0014  07700393  addi x7, x0, 0x77
+0018  08800413  addi x8, x0, 0x88
+001c  09900493  addi x9, x0, 0x99
+0020  0020a1b3  .word 0x0020a1b3        # slt  x3, x1, x2   (unsupported) -> NOP
+0024  00209233  .word 0x00209233        # sll  x4, x1, x2   (unsupported) -> NOP
+0028  0050c293  .word 0x0050c293        # xori x5, x1, 5    (unsupported) -> NOP
+002c  00102023  .word 0x00102023        # sw   with funct3=000 (sb) -> NOP, no store
+0030  004003ef  .word 0x004003ef        # jal  x7, 4        (unsupported) -> NOP
+0034  12345437  .word 0x12345437        # lui  x8, 0x12345  (unsupported) -> NOP
+0038  00000497  .word 0x00000497        # auipc x9, 0       (unsupported) -> NOP
+003c  00000000  .word 0x00000000        # all-zero word     -> NOP
+0040  00208333  add  x6, x1, x2         # x6 = 13 (execution continues normally)
+0044  00602023  sw   x6, 0(x0)          # mem[0] = 13
+0048  00000063  halt
+
+; labels

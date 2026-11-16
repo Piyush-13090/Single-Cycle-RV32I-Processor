@@ -1,0 +1,27 @@
+; listing of programs/alu_test.s
+; ADDR  MACHINE   SOURCE
+0000  00f00093  addi x1,  x0, 15        # x1  = 15
+0004  00a00113  addi x2,  x0, 10        # x2  = 10
+0008  002081b3  add  x3,  x1, x2        # x3  = 25
+000c  40208233  sub  x4,  x1, x2        # x4  = 5
+0010  401102b3  sub  x5,  x2, x1        # x5  = -5          (0xFFFFFFFB)
+0014  0020f333  and  x6,  x1, x2        # x6  = 1111 & 1010 = 10
+0018  0020e3b3  or   x7,  x1, x2        # x7  = 1111 | 1010 = 15
+001c  0020c433  xor  x8,  x1, x2        # x8  = 1111 ^ 1010 = 5
+0020  fff00493  addi x9,  x0, -1        # x9  = -1          (0xFFFFFFFF)
+0024  80148513  addi x10, x9, -2047     # x10 = -2048       (min 12-bit imm)
+0028  7ff00593  addi x11, x0, 2047      # x11 = 2047        (max 12-bit imm)
+002c  00b58633  add  x12, x11, x11      # x12 = 4094
+0030  0014c6b3  xor  x13, x9, x1        # x13 = ~15         (0xFFFFFFF0)
+0034  0024f733  and  x14, x9, x2        # x14 = 10
+0038  000067b3  or   x15, x0, x0        # x15 = 0
+003c  00208033  add  x0,  x1, x2        # write to x0 -> ignored
+0040  00500013  addi x0,  x0, 5         # write to x0 -> ignored
+0044  00100833  add  x16, x0, x1        # x16 = 15          (proves x0 is still 0)
+0048  401008b3  sub  x17, x0, x1        # x17 = -15
+004c  00018913  addi x18, x3, 0         # x18 = 25          (mv)
+0050  001489b3  add  x19, x9, x1        # x19 = 14          (-1 + 15, carry wraps)
+0054  40b50a33  sub  x20, x10, x11      # x20 = -4095
+0058  00000063  halt
+
+; labels

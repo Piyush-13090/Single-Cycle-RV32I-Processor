@@ -1,0 +1,23 @@
+{
+  "instructions_executed": 22,
+  "cycles_single_cycle": 22,
+  "mix": {
+    "addi": 7,
+    "add": 5,
+    "sub": 4,
+    "and": 2,
+    "or": 2,
+    "xor": 2
+  },
+  "branches": {
+    "beq": [
+      0,
+      0
+    ],
+    "bne": [
+      0,
+      0
+    ]
+  },
+  "static_instructions": 23
+}

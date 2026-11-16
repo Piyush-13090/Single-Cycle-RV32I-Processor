@@ -1,0 +1,36 @@
+; listing of programs/branch_test.s
+; ADDR  MACHINE   SOURCE
+0000  00500093  addi x1,  x0, 5
+0004  00500113  addi x2,  x0, 5
+0008  00700193  addi x3,  x0, 7
+000c  00000a13  addi x20, x0, 0         # error counter
+0010  00208463  beq  x1,  x2, L1        # 5 == 5  -> TAKEN (forward)
+0014  001a0a13  addi x20, x20, 1        # must be skipped
+0018  00100a93  L1:     addi x21, x0, 1         # marker 1
+001c  04308063  beq  x1,  x3, bad       # 5 == 7  -> NOT taken
+0020  00200b13  addi x22, x0, 2         # marker 2
+0024  00309463  bne  x1,  x3, L2        # 5 != 7  -> TAKEN (forward)
+0028  001a0a13  addi x20, x20, 1        # must be skipped
+002c  02209863  L2:     bne  x1,  x2, bad       # 5 != 5  -> NOT taken
+0030  00300b93  addi x23, x0, 3         # marker 3
+0034  00000293  addi x5,  x0, 0
+0038  00500313  addi x6,  x0, 5
+003c  00128293  loop1:  addi x5,  x5, 1
+0040  fe629ee3  bne  x5,  x6, loop1     # backward TAKEN 4x, not taken 1x
+0044  00300393  addi x7,  x0, 3
+0048  fff38393  loop2:  addi x7,  x7, -1
+004c  00038463  beq  x7,  x0, done2     # forward, taken when x7 == 0
+0050  fe000ce3  beq  x0,  x0, loop2     # unconditional backward jump
+0054  00400c13  done2:  addi x24, x0, 4         # marker 4
+0058  00000463  j    end
+005c  064a0a13  bad:    addi x20, x20, 100      # only reached if a branch is wrong
+0060  00000063  end:    halt
+
+; labels
+;   L1           = 0x0018
+;   L2           = 0x002c
+;   loop1        = 0x003c
+;   loop2        = 0x0048
+;   done2        = 0x0054
+;   bad          = 0x005c
+;   end          = 0x0060

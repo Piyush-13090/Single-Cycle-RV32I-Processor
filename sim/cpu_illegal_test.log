@@ -1,0 +1,86 @@
+WARNING: rtl/instr_mem.v:30: $readmemh(build/illegal_test.hex): Not enough words in the file for the requested range [0:255].
+VCD info: dumpfile sim/cpu_illegal_test.vcd opened for output.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[1] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[2] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[3] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[4] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[5] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[6] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[7] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[8] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[9] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[10] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[11] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[12] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[13] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[14] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[15] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[16] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[17] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[18] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[19] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[20] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[21] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[22] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[23] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[24] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[25] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[26] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[27] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[28] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[29] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[30] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_rf.regs[31] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[0] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[1] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[2] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[3] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[4] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[5] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[6] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[7] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[8] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[9] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[10] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[11] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[12] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[13] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[14] will conflict with an escaped identifier.
+VCD warning: array word tb_rv32i_cpu.dut.u_dmem.mem[15] will conflict with an escaped identifier.
+=====================================================
+ Single-Cycle RV32I CPU test : build/illegal_test.hex
+=====================================================
+Final register file (non-zero):
+  x1  = 0x00000009  (9)
+  x2  = 0x00000004  (4)
+  x3  = 0x00000033  (51)
+  x4  = 0x00000044  (68)
+  x5  = 0x00000055  (85)
+  x6  = 0x0000000d  (13)
+  x7  = 0x00000077  (119)
+  x8  = 0x00000088  (136)
+  x9  = 0x00000099  (153)
+Data memory (non-zero words):
+  mem[0x00000000] = 0x0000000d  (13)
+Instruction coverage (dynamic counts):
+  ADD        : 1
+  SUB        : 0
+  AND        : 0
+  OR         : 0
+  XOR        : 0
+  ADDI       : 9
+  LW         : 0
+  SW         : 2
+  BEQ taken  : 0
+  BEQ not-t  : 0
+  BNE taken  : 0
+  BNE not-t  : 0
+  back-br    : 0
+  neg-imm    : 0
+  x0-write   : 0
+  illegal    : 7
+Performance: 18 instructions in 18 cycles -> CPI = 1.00
+             execution time @ 100 MHz sim clock = 180 ns
+COVERAGE_CSV,1,0,0,0,0,9,0,2,0,0,0,0,0,0,0,7,18
+RESULT: PASS  (build/illegal_test.hex)
+tb/tb_rv32i_cpu.v:204: $finish called at 206000 (1ps)

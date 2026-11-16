@@ -1,0 +1,37 @@
+; listing of programs/array_sum.s
+; ADDR  MACHINE   SOURCE
+0000  10000413  addi s0, x0, 256        # s0 = base address 0x100
+0004  00300293  addi t0, x0, 3
+0008  00542023  sw   t0, 0(s0)
+000c  00100293  addi t0, x0, 1
+0010  00542223  sw   t0, 4(s0)
+0014  00400293  addi t0, x0, 4
+0018  00542423  sw   t0, 8(s0)
+001c  00100293  addi t0, x0, 1
+0020  00542623  sw   t0, 12(s0)
+0024  00500293  addi t0, x0, 5
+0028  00542823  sw   t0, 16(s0)
+002c  00900293  addi t0, x0, 9
+0030  00542a23  sw   t0, 20(s0)
+0034  00200293  addi t0, x0, 2
+0038  00542c23  sw   t0, 24(s0)
+003c  00600293  addi t0, x0, 6
+0040  00542e23  sw   t0, 28(s0)
+0044  00500293  addi t0, x0, 5
+0048  02542023  sw   t0, 32(s0)
+004c  00300293  addi t0, x0, 3
+0050  02542223  sw   t0, 36(s0)
+0054  00a00593  addi a1, x0, 10         # n = 10
+0058  00000513  addi a0, x0, 0          # sum = 0
+005c  00040613  addi a2, s0, 0          # ptr = base
+0060  00000693  addi a3, x0, 0          # i = 0
+0064  00062303  loop:   lw   t1, 0(a2)          # t1 = A[i]
+0068  00650533  add  a0, a0, t1         # sum += A[i]
+006c  00460613  addi a2, a2, 4          # ptr++
+0070  00168693  addi a3, a3, 1          # i++
+0074  feb698e3  bne  a3, a1, loop       # while (i != n)
+0078  20a02023  sw   a0, 512(x0)        # mem[0x200] = sum
+007c  00000063  halt
+
+; labels
+;   loop         = 0x0064

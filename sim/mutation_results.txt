@@ -1,0 +1,13 @@
+  [ 1] BNE behaves like BEQ       KILLED  (detected by: branch_test array_sum fibonacci full_test)
+  [ 2] x0 not hard-wired to 0     KILLED  (detected by: alu_test mem_test)
+  [ 3] SUB executes as ADD        KILLED  (detected by: alu_test full_test)
+  [ 4] XOR executes as OR         KILLED  (detected by: alu_test full_test)
+  [ 5] S-type immediate wrong     KILLED  (detected by: mem_test illegal_test array_sum fibonacci full_test)
+  [ 6] B-type imm bit 11 lost     KILLED  (detected by: branch_test array_sum fibonacci full_test)
+  [ 7] LW writes ALU result       KILLED  (detected by: mem_test array_sum fibonacci full_test)
+  [ 8] SW stores rs1 not rs2      KILLED  (detected by: mem_test illegal_test array_sum fibonacci full_test)
+  [ 9] Illegal instr writes rd    KILLED  (detected by: illegal_test)
+  [10] ALU-src MUX stuck at rs2   KILLED  (detected by: alu_test mem_test branch_test illegal_test array_sum fibonacci full_test)
+  [11] PC+4 adder adds 2          KILLED  (detected by: alu_test mem_test branch_test illegal_test array_sum fibonacci full_test)
+  [12] RegWrite not gated by en   KILLED  (detected by: branch_test(stall) array_sum(stall) fibonacci(stall) full_test(stall))
+Mutation score: 12 / 12 bugs detected

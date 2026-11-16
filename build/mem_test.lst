@@ -1,0 +1,28 @@
+; listing of programs/mem_test.s
+; ADDR  MACHINE   SOURCE
+0000  06400093  addi x1,  x0, 100       # x1 = 100
+0004  f3800113  addi x2,  x0, -200      # x2 = -200
+0008  7ab00193  addi x3,  x0, 0x7AB     # x3 = 1963
+000c  04000513  addi x10, x0, 64        # base address 0x40
+0010  00152023  sw   x1,  0(x10)        # mem[0x40] = 100
+0014  00252223  sw   x2,  4(x10)        # mem[0x44] = -200
+0018  00352423  sw   x3,  8(x10)        # mem[0x48] = 1963
+001c  fe252e23  sw   x2,  -4(x10)       # mem[0x3C] = -200   (negative offset)
+0020  00052203  lw   x4,  0(x10)        # x4 = 100
+0024  00452283  lw   x5,  4(x10)        # x5 = -200
+0028  00852303  lw   x6,  8(x10)        # x6 = 1963
+002c  ffc52383  lw   x7,  -4(x10)       # x7 = -200
+0030  00520433  add  x8,  x4, x5        # x8 = -100
+0034  00852623  sw   x8,  12(x10)       # mem[0x4C] = -100
+0038  00c52483  lw   x9,  12(x10)       # x9 = -100
+003c  00302023  sw   x3,  0(x0)         # mem[0x000] = 1963  (first word)
+0040  3e902e23  sw   x9,  1020(x0)      # mem[0x3FC] = -100  (last word of 1 KB)
+0044  3fc02583  lw   x11, 1020(x0)      # x11 = -100
+0048  00002603  lw   x12, 0(x0)         # x12 = 1963
+004c  06402683  lw   x13, 100(x0)       # x13 = 0            (never written)
+0050  00052003  lw   x0,  0(x10)        # load into x0 -> ignored
+0054  00452703  lw   x14, 4(x10)        # x14 = -200
+0058  00e707b3  add  x15, x14, x14      # x15 = -400  (uses load result next cycle)
+005c  00000063  halt
+
+; labels

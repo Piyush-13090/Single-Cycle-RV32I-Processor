@@ -1,0 +1,52 @@
+; listing of programs/full_test.s
+; ADDR  MACHINE   SOURCE
+0000  04000413  addi s0, x0, 0x40       # base address
+0004  00c00293  addi t0, x0, 12
+0008  00542023  sw   t0, 0(s0)
+000c  00700293  addi t0, x0, 7
+0010  00542223  sw   t0, 4(s0)
+0014  00c00293  addi t0, x0, 12
+0018  00542423  sw   t0, 8(s0)
+001c  ffd00293  addi t0, x0, -3
+0020  00542623  sw   t0, 12(s0)
+0024  00c00293  addi t0, x0, 12
+0028  00542823  sw   t0, 16(s0)
+002c  01900293  addi t0, x0, 25
+0030  00542a23  sw   t0, 20(s0)
+0034  00600493  addi s1, x0, 6          # n
+0038  00000313  addi t1, x0, 0          # i
+003c  00000593  addi a1, x0, 0          # sum
+0040  00000613  addi a2, x0, 0          # xor
+0044  00000693  addi a3, x0, 0          # count of key
+0048  00000713  addi a4, x0, 0          # or
+004c  fff00793  addi a5, x0, -1         # and (all ones)
+0050  00c00393  addi t2, x0, 12         # key
+0054  00040e13  addi t3, s0, 0          # ptr
+0058  000e2e83  loop:   lw   t4, 0(t3)
+005c  01d585b3  add  a1, a1, t4
+0060  01d64633  xor  a2, a2, t4
+0064  01d76733  or   a4, a4, t4
+0068  01d7f7b3  and  a5, a5, t4
+006c  007e9463  bne  t4, t2, skip       # not the key -> skip count
+0070  00168693  addi a3, a3, 1
+0074  004e0e13  skip:   addi t3, t3, 4
+0078  00130313  addi t1, t1, 1
+007c  fc931ee3  bne  t1, s1, loop
+0080  00300f13  addi t5, x0, 3
+0084  01e68663  beq  a3, t5, good       # expected count = 3
+0088  fff00513  addi a0, x0, -1         # failure marker
+008c  00000463  j    store
+0090  40d58533  good:   sub  a0, a1, a3         # a0 = 65 - 3 = 62
+0094  08a02023  store:  sw   a0, 128(x0)
+0098  08b02223  sw   a1, 132(x0)
+009c  08c02423  sw   a2, 136(x0)
+00a0  08d02623  sw   a3, 140(x0)
+00a4  08e02823  sw   a4, 144(x0)
+00a8  08f02a23  sw   a5, 148(x0)
+00ac  00000063  halt
+
+; labels
+;   loop         = 0x0058
+;   skip         = 0x0074
+;   good         = 0x0090
+;   store        = 0x0094

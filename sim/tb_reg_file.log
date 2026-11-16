@@ -1,0 +1,4 @@
+ERROR: rtl/instr_mem.v:30: $readmemh: Unable to open program.hex for reading.
+VCD info: dumpfile sim/tb_reg_file.vcd opened for output.
+tb_reg_file: PASS (68 tests)
+tb/tb_reg_file.v:65: $finish called at 406000 (1ps)
