@@ -1,0 +1,118 @@
+{
+  "fmax_mhz": 44.39,
+  "t_single_cycle_ns": 22.53,
+  "t_multi_cycle_ns": 6.46,
+  "critical_path_ns": 22.53,
+  "stages": {
+    "Instruction memory (fetch)": 5.83,
+    "Register file read + decode": 5.09,
+    "ALU (32-bit add / compare)": 2.86,
+    "Data memory read": 5.86,
+    "Write-back MUX + register write": 2.89
+  },
+  "rows": [
+    {
+      "program": "alu_test",
+      "instructions": 22,
+      "sc_cycles": 22,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 495.6,
+      "mc_cycles": 88,
+      "mc_cpi": 4.0,
+      "mc_time_ns": 568.5,
+      "speedup_sc_vs_mc": 1.15,
+      "mips_sc": 44.4,
+      "mips_mc": 38.7
+    },
+    {
+      "program": "mem_test",
+      "instructions": 23,
+      "sc_cycles": 23,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 518.1,
+      "mc_cycles": 102,
+      "mc_cpi": 4.43,
+      "mc_time_ns": 658.9,
+      "speedup_sc_vs_mc": 1.27,
+      "mips_sc": 44.4,
+      "mips_mc": 34.9
+    },
+    {
+      "program": "branch_test",
+      "instructions": 34,
+      "sc_cycles": 34,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 765.9,
+      "mc_cycles": 121,
+      "mc_cpi": 3.56,
+      "mc_time_ns": 781.7,
+      "speedup_sc_vs_mc": 1.02,
+      "mips_sc": 44.4,
+      "mips_mc": 43.5
+    },
+    {
+      "program": "illegal_test",
+      "instructions": 18,
+      "sc_cycles": 18,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 405.5,
+      "mc_cycles": 65,
+      "mc_cpi": 3.61,
+      "mc_time_ns": 419.9,
+      "speedup_sc_vs_mc": 1.04,
+      "mips_sc": 44.4,
+      "mips_mc": 42.9
+    },
+    {
+      "program": "array_sum",
+      "instructions": 76,
+      "sc_cycles": 76,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 1712.1,
+      "mc_cycles": 304,
+      "mc_cpi": 4.0,
+      "mc_time_ns": 1963.8,
+      "speedup_sc_vs_mc": 1.15,
+      "mips_sc": 44.4,
+      "mips_mc": 38.7
+    },
+    {
+      "program": "fibonacci",
+      "instructions": 146,
+      "sc_cycles": 146,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 3289.0,
+      "mc_cycles": 565,
+      "mc_cpi": 3.87,
+      "mc_time_ns": 3649.9,
+      "speedup_sc_vs_mc": 1.11,
+      "mips_sc": 44.4,
+      "mips_mc": 40.0
+    },
+    {
+      "program": "full_test",
+      "instructions": 88,
+      "sc_cycles": 88,
+      "sc_cpi": 1.0,
+      "sc_time_ns": 1982.4,
+      "mc_cycles": 345,
+      "mc_cpi": 3.92,
+      "mc_time_ns": 2228.7,
+      "speedup_sc_vs_mc": 1.12,
+      "mips_sc": 44.4,
+      "mips_mc": 39.5
+    }
+  ],
+  "benchmark_mix": {
+    "addi": 152,
+    "sw": 43,
+    "lw": 17,
+    "add": 36,
+    "bne": 42,
+    "xor": 6,
+    "or": 6,
+    "and": 6,
+    "beq": 1,
+    "sub": 1
+  }
+}

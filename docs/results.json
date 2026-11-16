@@ -1,0 +1,1210 @@
+{
+ "unit": [
+  {
+   "name": "tb_alu",
+   "result": "PASS",
+   "tests": 5010
+  },
+  {
+   "name": "tb_reg_file",
+   "result": "PASS",
+   "tests": 68
+  },
+  {
+   "name": "tb_imm_gen",
+   "result": "PASS",
+   "tests": 13
+  },
+  {
+   "name": "tb_control_unit",
+   "result": "PASS",
+   "tests": 18
+  }
+ ],
+ "cpu": [
+  {
+   "program": "alu_test",
+   "result": "PASS",
+   "instructions": 22
+  },
+  {
+   "program": "mem_test",
+   "result": "PASS",
+   "instructions": 23
+  },
+  {
+   "program": "branch_test",
+   "result": "PASS",
+   "instructions": 34
+  },
+  {
+   "program": "illegal_test",
+   "result": "PASS",
+   "instructions": 18
+  },
+  {
+   "program": "array_sum",
+   "result": "PASS",
+   "instructions": 76
+  },
+  {
+   "program": "fibonacci",
+   "result": "PASS",
+   "instructions": 146
+  },
+  {
+   "program": "full_test",
+   "result": "PASS",
+   "instructions": 88
+  }
+ ],
+ "stall": [
+  {
+   "program": "alu_test",
+   "result": "PASS",
+   "stall_cycles": 13
+  },
+  {
+   "program": "mem_test",
+   "result": "PASS",
+   "stall_cycles": 13
+  },
+  {
+   "program": "branch_test",
+   "result": "PASS",
+   "stall_cycles": 20
+  },
+  {
+   "program": "illegal_test",
+   "result": "PASS",
+   "stall_cycles": 10
+  },
+  {
+   "program": "array_sum",
+   "result": "PASS",
+   "stall_cycles": 44
+  },
+  {
+   "program": "fibonacci",
+   "result": "PASS",
+   "stall_cycles": 84
+  },
+  {
+   "program": "full_test",
+   "result": "PASS",
+   "stall_cycles": 50
+  }
+ ],
+ "coverage": {
+  "alu_test": {
+   "add": 5,
+   "sub": 4,
+   "and": 2,
+   "or": 2,
+   "xor": 2,
+   "addi": 7,
+   "lw": 0,
+   "sw": 0,
+   "beq_taken": 0,
+   "beq_not_taken": 0,
+   "bne_taken": 0,
+   "bne_not_taken": 0,
+   "backward_branch": 0,
+   "negative_imm": 2,
+   "x0_write": 2,
+   "illegal": 0,
+   "cycles": 22
+  },
+  "mem_test": {
+   "add": 2,
+   "sub": 0,
+   "and": 0,
+   "or": 0,
+   "xor": 0,
+   "addi": 4,
+   "lw": 10,
+   "sw": 7,
+   "beq_taken": 0,
+   "beq_not_taken": 0,
+   "bne_taken": 0,
+   "bne_not_taken": 0,
+   "backward_branch": 0,
+   "negative_imm": 3,
+   "x0_write": 1,
+   "illegal": 0,
+   "cycles": 23
+  },
+  "branch_test": {
+   "add": 0,
+   "sub": 0,
+   "and": 0,
+   "or": 0,
+   "xor": 0,
+   "addi": 19,
+   "lw": 0,
+   "sw": 0,
+   "beq_taken": 5,
+   "beq_not_taken": 3,
+   "bne_taken": 5,
+   "bne_not_taken": 2,
+   "backward_branch": 6,
+   "negative_imm": 3,
+   "x0_write": 0,
+   "illegal": 0,
+   "cycles": 34
+  },
+  "illegal_test": {
+   "add": 1,
+   "sub": 0,
+   "and": 0,
+   "or": 0,
+   "xor": 0,
+   "addi": 9,
+   "lw": 0,
+   "sw": 2,
+   "beq_taken": 0,
+   "beq_not_taken": 0,
+   "bne_taken": 0,
+   "bne_not_taken": 0,
+   "backward_branch": 0,
+   "negative_imm": 0,
+   "x0_write": 0,
+   "illegal": 7,
+   "cycles": 18
+  },
+  "array_sum": {
+   "add": 10,
+   "sub": 0,
+   "and": 0,
+   "or": 0,
+   "xor": 0,
+   "addi": 35,
+   "lw": 10,
+   "sw": 11,
+   "beq_taken": 0,
+   "beq_not_taken": 0,
+   "bne_taken": 9,
+   "bne_not_taken": 1,
+   "backward_branch": 9,
+   "negative_imm": 0,
+   "x0_write": 0,
+   "illegal": 0,
+   "cycles": 76
+  },
+  "fibonacci": {
+   "add": 20,
+   "sub": 0,
+   "and": 0,
+   "or": 0,
+   "xor": 0,
+   "addi": 85,
+   "lw": 1,
+   "sw": 20,
+   "beq_taken": 0,
+   "beq_not_taken": 0,
+   "bne_taken": 19,
+   "bne_not_taken": 1,
+   "backward_branch": 19,
+   "negative_imm": 1,
+   "x0_write": 0,
+   "illegal": 0,
+   "cycles": 146
+  },
+  "full_test": {
+   "add": 6,
+   "sub": 1,
+   "and": 6,
+   "or": 6,
+   "xor": 6,
+   "addi": 32,
+   "lw": 6,
+   "sw": 12,
+   "beq_taken": 1,
+   "beq_not_taken": 0,
+   "bne_taken": 8,
+   "bne_not_taken": 4,
+   "backward_branch": 5,
+   "negative_imm": 2,
+   "x0_write": 0,
+   "illegal": 0,
+   "cycles": 88
+  }
+ },
+ "programs": {
+  "alu_test": {
+   "static": 23,
+   "dynamic": 22,
+   "regs": [
+    [
+     "1",
+     "0x0000000f",
+     "15"
+    ],
+    [
+     "2",
+     "0x0000000a",
+     "10"
+    ],
+    [
+     "3",
+     "0x00000019",
+     "25"
+    ],
+    [
+     "4",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "5",
+     "0xfffffffb",
+     "-5"
+    ],
+    [
+     "6",
+     "0x0000000a",
+     "10"
+    ],
+    [
+     "7",
+     "0x0000000f",
+     "15"
+    ],
+    [
+     "8",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "9",
+     "0xffffffff",
+     "-1"
+    ],
+    [
+     "10",
+     "0xfffff800",
+     "-2048"
+    ],
+    [
+     "11",
+     "0x000007ff",
+     "2047"
+    ],
+    [
+     "12",
+     "0x00000ffe",
+     "4094"
+    ],
+    [
+     "13",
+     "0xfffffff0",
+     "-16"
+    ],
+    [
+     "14",
+     "0x0000000a",
+     "10"
+    ],
+    [
+     "16",
+     "0x0000000f",
+     "15"
+    ],
+    [
+     "17",
+     "0xfffffff1",
+     "-15"
+    ],
+    [
+     "18",
+     "0x00000019",
+     "25"
+    ],
+    [
+     "19",
+     "0x0000000e",
+     "14"
+    ],
+    [
+     "20",
+     "0xfffff001",
+     "-4095"
+    ]
+   ],
+   "mem": [],
+   "desc": "Test 1 : ALU and immediate instructions  (ADD SUB AND OR XOR ADDI) Covers positive/negative values, wrap-around, 12-bit immediate limits and writes to x0 (must be ignored)."
+  },
+  "mem_test": {
+   "static": 24,
+   "dynamic": 23,
+   "regs": [
+    [
+     "1",
+     "0x00000064",
+     "100"
+    ],
+    [
+     "2",
+     "0xffffff38",
+     "-200"
+    ],
+    [
+     "3",
+     "0x000007ab",
+     "1963"
+    ],
+    [
+     "4",
+     "0x00000064",
+     "100"
+    ],
+    [
+     "5",
+     "0xffffff38",
+     "-200"
+    ],
+    [
+     "6",
+     "0x000007ab",
+     "1963"
+    ],
+    [
+     "7",
+     "0xffffff38",
+     "-200"
+    ],
+    [
+     "8",
+     "0xffffff9c",
+     "-100"
+    ],
+    [
+     "9",
+     "0xffffff9c",
+     "-100"
+    ],
+    [
+     "10",
+     "0x00000040",
+     "64"
+    ],
+    [
+     "11",
+     "0xffffff9c",
+     "-100"
+    ],
+    [
+     "12",
+     "0x000007ab",
+     "1963"
+    ],
+    [
+     "14",
+     "0xffffff38",
+     "-200"
+    ],
+    [
+     "15",
+     "0xfffffe70",
+     "-400"
+    ]
+   ],
+   "mem": [
+    [
+     "0x00000000",
+     "0x000007ab",
+     "1963"
+    ],
+    [
+     "0x0000003c",
+     "0xffffff38",
+     "-200"
+    ],
+    [
+     "0x00000040",
+     "0x00000064",
+     "100"
+    ],
+    [
+     "0x00000044",
+     "0xffffff38",
+     "-200"
+    ],
+    [
+     "0x00000048",
+     "0x000007ab",
+     "1963"
+    ],
+    [
+     "0x0000004c",
+     "0xffffff9c",
+     "-100"
+    ],
+    [
+     "0x000003fc",
+     "0xffffff9c",
+     "-100"
+    ]
+   ],
+   "desc": "Test 2 : Memory instructions  (LW SW) Covers positive / negative / zero offsets, first and last word of the 1 KB data memory, load of an unwritten location, load into x0, and a load whose"
+  },
+  "branch_test": {
+   "static": 25,
+   "dynamic": 34,
+   "regs": [
+    [
+     "1",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "2",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "3",
+     "0x00000007",
+     "7"
+    ],
+    [
+     "5",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "6",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "21",
+     "0x00000001",
+     "1"
+    ],
+    [
+     "22",
+     "0x00000002",
+     "2"
+    ],
+    [
+     "23",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "24",
+     "0x00000004",
+     "4"
+    ]
+   ],
+   "mem": [],
+   "desc": "Test 3 : Branch instructions  (BEQ BNE) Covers BEQ taken / not taken, BNE taken / not taken, forward and backward branches, loops, and an unconditional jump (beq x0,x0). x20 counts errors"
+  },
+  "illegal_test": {
+   "static": 19,
+   "dynamic": 18,
+   "regs": [
+    [
+     "1",
+     "0x00000009",
+     "9"
+    ],
+    [
+     "2",
+     "0x00000004",
+     "4"
+    ],
+    [
+     "3",
+     "0x00000033",
+     "51"
+    ],
+    [
+     "4",
+     "0x00000044",
+     "68"
+    ],
+    [
+     "5",
+     "0x00000055",
+     "85"
+    ],
+    [
+     "6",
+     "0x0000000d",
+     "13"
+    ],
+    [
+     "7",
+     "0x00000077",
+     "119"
+    ],
+    [
+     "8",
+     "0x00000088",
+     "136"
+    ],
+    [
+     "9",
+     "0x00000099",
+     "153"
+    ]
+   ],
+   "mem": [
+    [
+     "0x00000000",
+     "0x0000000d",
+     "13"
+    ]
+   ],
+   "desc": "Test 4 : Unsupported instructions Instructions outside the 10-instruction subset must behave as a NOP: no register write, no memory write, PC simply advances by 4."
+  },
+  "array_sum": {
+   "static": 32,
+   "dynamic": 76,
+   "regs": [
+    [
+     "5",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "6",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "8",
+     "0x00000100",
+     "256"
+    ],
+    [
+     "10",
+     "0x00000027",
+     "39"
+    ],
+    [
+     "11",
+     "0x0000000a",
+     "10"
+    ],
+    [
+     "12",
+     "0x00000128",
+     "296"
+    ],
+    [
+     "13",
+     "0x0000000a",
+     "10"
+    ]
+   ],
+   "mem": [
+    [
+     "0x00000100",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "0x00000104",
+     "0x00000001",
+     "1"
+    ],
+    [
+     "0x00000108",
+     "0x00000004",
+     "4"
+    ],
+    [
+     "0x0000010c",
+     "0x00000001",
+     "1"
+    ],
+    [
+     "0x00000110",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "0x00000114",
+     "0x00000009",
+     "9"
+    ],
+    [
+     "0x00000118",
+     "0x00000002",
+     "2"
+    ],
+    [
+     "0x0000011c",
+     "0x00000006",
+     "6"
+    ],
+    [
+     "0x00000120",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "0x00000124",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "0x00000200",
+     "0x00000027",
+     "39"
+    ]
+   ],
+   "desc": "Benchmark 1 : Array sum Stores a 10-element array at 0x100 with SW, then sums it in a loop with LW. Result: a0 (x10) = 39, also stored at mem[0x200]."
+  },
+  "fibonacci": {
+   "static": 14,
+   "dynamic": 146,
+   "regs": [
+    [
+     "5",
+     "0x00001a6d",
+     "6765"
+    ],
+    [
+     "6",
+     "0x00002ac2",
+     "10946"
+    ],
+    [
+     "7",
+     "0x00000014",
+     "20"
+    ],
+    [
+     "8",
+     "0x000000d0",
+     "208"
+    ],
+    [
+     "9",
+     "0x00000014",
+     "20"
+    ],
+    [
+     "10",
+     "0x00001055",
+     "4181"
+    ],
+    [
+     "28",
+     "0x00002ac2",
+     "10946"
+    ]
+   ],
+   "mem": [
+    [
+     "0x00000084",
+     "0x00000001",
+     "1"
+    ],
+    [
+     "0x00000088",
+     "0x00000001",
+     "1"
+    ],
+    [
+     "0x0000008c",
+     "0x00000002",
+     "2"
+    ],
+    [
+     "0x00000090",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "0x00000094",
+     "0x00000005",
+     "5"
+    ],
+    [
+     "0x00000098",
+     "0x00000008",
+     "8"
+    ],
+    [
+     "0x0000009c",
+     "0x0000000d",
+     "13"
+    ],
+    [
+     "0x000000a0",
+     "0x00000015",
+     "21"
+    ],
+    [
+     "0x000000a4",
+     "0x00000022",
+     "34"
+    ],
+    [
+     "0x000000a8",
+     "0x00000037",
+     "55"
+    ],
+    [
+     "0x000000ac",
+     "0x00000059",
+     "89"
+    ],
+    [
+     "0x000000b0",
+     "0x00000090",
+     "144"
+    ],
+    [
+     "0x000000b4",
+     "0x000000e9",
+     "233"
+    ],
+    [
+     "0x000000b8",
+     "0x00000179",
+     "377"
+    ],
+    [
+     "0x000000bc",
+     "0x00000262",
+     "610"
+    ],
+    [
+     "0x000000c0",
+     "0x000003db",
+     "987"
+    ],
+    [
+     "0x000000c4",
+     "0x0000063d",
+     "1597"
+    ],
+    [
+     "0x000000c8",
+     "0x00000a18",
+     "2584"
+    ],
+    [
+     "0x000000cc",
+     "0x00001055",
+     "4181"
+    ]
+   ],
+   "desc": "Benchmark 2 : Fibonacci series Computes the first 20 Fibonacci numbers and stores them at 0x080..0x0CC. Result: a0 (x10) = F(19) = 4181 (loaded back from memory)."
+  },
+  "full_test": {
+   "static": 44,
+   "dynamic": 88,
+   "regs": [
+    [
+     "5",
+     "0x00000019",
+     "25"
+    ],
+    [
+     "6",
+     "0x00000006",
+     "6"
+    ],
+    [
+     "7",
+     "0x0000000c",
+     "12"
+    ],
+    [
+     "8",
+     "0x00000040",
+     "64"
+    ],
+    [
+     "9",
+     "0x00000006",
+     "6"
+    ],
+    [
+     "10",
+     "0x0000003e",
+     "62"
+    ],
+    [
+     "11",
+     "0x00000041",
+     "65"
+    ],
+    [
+     "12",
+     "0xffffffef",
+     "-17"
+    ],
+    [
+     "13",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "14",
+     "0xffffffff",
+     "-1"
+    ],
+    [
+     "28",
+     "0x00000058",
+     "88"
+    ],
+    [
+     "29",
+     "0x00000019",
+     "25"
+    ],
+    [
+     "30",
+     "0x00000003",
+     "3"
+    ]
+   ],
+   "mem": [
+    [
+     "0x00000040",
+     "0x0000000c",
+     "12"
+    ],
+    [
+     "0x00000044",
+     "0x00000007",
+     "7"
+    ],
+    [
+     "0x00000048",
+     "0x0000000c",
+     "12"
+    ],
+    [
+     "0x0000004c",
+     "0xfffffffd",
+     "-3"
+    ],
+    [
+     "0x00000050",
+     "0x0000000c",
+     "12"
+    ],
+    [
+     "0x00000054",
+     "0x00000019",
+     "25"
+    ],
+    [
+     "0x00000080",
+     "0x0000003e",
+     "62"
+    ],
+    [
+     "0x00000084",
+     "0x00000041",
+     "65"
+    ],
+    [
+     "0x00000088",
+     "0xffffffef",
+     "-17"
+    ],
+    [
+     "0x0000008c",
+     "0x00000003",
+     "3"
+    ],
+    [
+     "0x00000090",
+     "0xffffffff",
+     "-1"
+    ]
+   ],
+   "desc": "Full test : uses ALL 10 instructions in one program. Used for synthesis and for the FPGA / live demo (a0 is shown on the LEDs). "
+  }
+ },
+ "coverage_total": {
+  "add": 44,
+  "sub": 5,
+  "and": 8,
+  "or": 8,
+  "xor": 8,
+  "addi": 191,
+  "lw": 27,
+  "sw": 52,
+  "beq_taken": 6,
+  "beq_not_taken": 3,
+  "bne_taken": 41,
+  "bne_not_taken": 8,
+  "backward_branch": 39,
+  "negative_imm": 11,
+  "x0_write": 3,
+  "illegal": 7,
+  "cycles": 407
+ },
+ "mutation": [
+  {
+   "id": 1,
+   "bug": "BNE behaves like BEQ",
+   "status": "KILLED",
+   "detected_by": "branch_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 2,
+   "bug": "x0 not hard-wired to 0",
+   "status": "KILLED",
+   "detected_by": "alu_test mem_test"
+  },
+  {
+   "id": 3,
+   "bug": "SUB executes as ADD",
+   "status": "KILLED",
+   "detected_by": "alu_test full_test"
+  },
+  {
+   "id": 4,
+   "bug": "XOR executes as OR",
+   "status": "KILLED",
+   "detected_by": "alu_test full_test"
+  },
+  {
+   "id": 5,
+   "bug": "S-type immediate wrong",
+   "status": "KILLED",
+   "detected_by": "mem_test illegal_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 6,
+   "bug": "B-type imm bit 11 lost",
+   "status": "KILLED",
+   "detected_by": "branch_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 7,
+   "bug": "LW writes ALU result",
+   "status": "KILLED",
+   "detected_by": "mem_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 8,
+   "bug": "SW stores rs1 not rs2",
+   "status": "KILLED",
+   "detected_by": "mem_test illegal_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 9,
+   "bug": "Illegal instr writes rd",
+   "status": "KILLED",
+   "detected_by": "illegal_test"
+  },
+  {
+   "id": 10,
+   "bug": "ALU-src MUX stuck at rs2",
+   "status": "KILLED",
+   "detected_by": "alu_test mem_test branch_test illegal_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 11,
+   "bug": "PC+4 adder adds 2",
+   "status": "KILLED",
+   "detected_by": "alu_test mem_test branch_test illegal_test array_sum fibonacci full_test"
+  },
+  {
+   "id": 12,
+   "bug": "RegWrite not gated by en",
+   "status": "KILLED",
+   "detected_by": "branch_test(stall) array_sum(stall) fibonacci(stall) full_test(stall)"
+  }
+ ],
+ "xilinx": {
+  "cells": {
+   "BUFG": 1,
+   "CARRY4": 39,
+   "FDRE": 100,
+   "IBUF": 4,
+   "INV": 4,
+   "LUT1": 2,
+   "LUT2": 165,
+   "LUT3": 117,
+   "LUT4": 33,
+   "LUT5": 60,
+   "LUT6": 85,
+   "MUXF7": 9,
+   "MUXF8": 1,
+   "OBUF": 16,
+   "RAM256X1S": 32,
+   "RAM32M": 12
+  },
+  "logic_luts": 462,
+  "lutram_luts": 176,
+  "total_luts": 638,
+  "ffs": 100,
+  "carry4": 39,
+  "io": 21,
+  "device": "XC7A35T (Basys-3)",
+  "lut_avail": 20800,
+  "ff_avail": 41600,
+  "io_avail": 106
+ },
+ "ecp5": {
+  "TRELLIS_COMB": [
+   2073,
+   24288
+  ],
+  "TRELLIS_FF": [
+   58,
+   24288
+  ],
+  "TRELLIS_RAMW": [
+   160,
+   3036
+  ],
+  "DP16KD": [
+   1,
+   56
+  ],
+  "TRELLIS_IO": [
+   20,
+   197
+  ],
+  "fmax_mhz": 44.39
+ },
+ "generic": {
+  "cells": 24697,
+  "$_AND_": 2207,
+  "$_DFFE_PP_": 9216,
+  "$_DFF_P_": 22,
+  "$_MUX_": 8380,
+  "$_NAND_": 2996,
+  "$_NOR_": 101,
+  "$_NOT_": 86,
+  "$_OR_": 1513,
+  "$_SDFFE_PP0P_": 32,
+  "$_SDFF_PP0_": 4,
+  "$_XNOR_": 80,
+  "$_XOR_": 46
+ },
+ "perf": {
+  "fmax_mhz": 44.39,
+  "t_single_cycle_ns": 22.53,
+  "t_multi_cycle_ns": 6.46,
+  "critical_path_ns": 22.53,
+  "stages": {
+   "Instruction memory (fetch)": 5.83,
+   "Register file read + decode": 5.09,
+   "ALU (32-bit add / compare)": 2.86,
+   "Data memory read": 5.86,
+   "Write-back MUX + register write": 2.89
+  },
+  "rows": [
+   {
+    "program": "alu_test",
+    "instructions": 22,
+    "sc_cycles": 22,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 495.6,
+    "mc_cycles": 88,
+    "mc_cpi": 4.0,
+    "mc_time_ns": 568.5,
+    "speedup_sc_vs_mc": 1.15,
+    "mips_sc": 44.4,
+    "mips_mc": 38.7
+   },
+   {
+    "program": "mem_test",
+    "instructions": 23,
+    "sc_cycles": 23,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 518.1,
+    "mc_cycles": 102,
+    "mc_cpi": 4.43,
+    "mc_time_ns": 658.9,
+    "speedup_sc_vs_mc": 1.27,
+    "mips_sc": 44.4,
+    "mips_mc": 34.9
+   },
+   {
+    "program": "branch_test",
+    "instructions": 34,
+    "sc_cycles": 34,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 765.9,
+    "mc_cycles": 121,
+    "mc_cpi": 3.56,
+    "mc_time_ns": 781.7,
+    "speedup_sc_vs_mc": 1.02,
+    "mips_sc": 44.4,
+    "mips_mc": 43.5
+   },
+   {
+    "program": "illegal_test",
+    "instructions": 18,
+    "sc_cycles": 18,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 405.5,
+    "mc_cycles": 65,
+    "mc_cpi": 3.61,
+    "mc_time_ns": 419.9,
+    "speedup_sc_vs_mc": 1.04,
+    "mips_sc": 44.4,
+    "mips_mc": 42.9
+   },
+   {
+    "program": "array_sum",
+    "instructions": 76,
+    "sc_cycles": 76,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 1712.1,
+    "mc_cycles": 304,
+    "mc_cpi": 4.0,
+    "mc_time_ns": 1963.8,
+    "speedup_sc_vs_mc": 1.15,
+    "mips_sc": 44.4,
+    "mips_mc": 38.7
+   },
+   {
+    "program": "fibonacci",
+    "instructions": 146,
+    "sc_cycles": 146,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 3289.0,
+    "mc_cycles": 565,
+    "mc_cpi": 3.87,
+    "mc_time_ns": 3649.9,
+    "speedup_sc_vs_mc": 1.11,
+    "mips_sc": 44.4,
+    "mips_mc": 40.0
+   },
+   {
+    "program": "full_test",
+    "instructions": 88,
+    "sc_cycles": 88,
+    "sc_cpi": 1.0,
+    "sc_time_ns": 1982.4,
+    "mc_cycles": 345,
+    "mc_cpi": 3.92,
+    "mc_time_ns": 2228.7,
+    "speedup_sc_vs_mc": 1.12,
+    "mips_sc": 44.4,
+    "mips_mc": 39.5
+   }
+  ],
+  "benchmark_mix": {
+   "addi": 152,
+   "sw": 43,
+   "lw": 17,
+   "add": 36,
+   "bne": 42,
+   "xor": 6,
+   "or": 6,
+   "and": 6,
+   "beq": 1,
+   "sub": 1
+  }
+ }
+}
