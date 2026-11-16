@@ -1,0 +1,23 @@
+
+15. Printing statistics.
+
+=== fpga_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1284 wires
+     3295 wire bits
+     1284 public wires
+     3295 public wire bits
+        5 ports
+       20 port bits
+     1491 cells
+       15   $scopeinfo
+       59   CCU2C
+        1   DP16KD
+       31   L6MUX21
+      973   LUT4
+      194   PFUMX
+      160   TRELLIS_DPR16X4
+       58   TRELLIS_FF
+

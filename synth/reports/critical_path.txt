@@ -1,0 +1,8 @@
+Measured on Lattice ECP5 LFE5U-25F (nextpnr), Fmax = 44.39 MHz
+Critical path = 22.53 ns  (the LW path)
+
+  Instruction memory (fetch)           5.83 ns
+  Register file read + decode          5.09 ns
+  ALU (32-bit add / compare)           2.86 ns
+  Data memory read                     5.86 ns
+  Write-back MUX + register write      2.89 ns
